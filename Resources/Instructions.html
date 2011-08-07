@@ -1,0 +1,130 @@
+<html>
+<head>
+<H1><a name="ref0">CALCView Documentation</a></H1>
+</head>
+<body>
+Welcome to CALCView.  CALCView allows you to easily create, copy and debug CALC, CALCA, LOGIC, and MATH blocks.  It should only 
+take a few minutes to get familiar with CALCView.<br><br>
+
+Contact Info:<br>
+Homepage: http://www.calcview.com<br>
+Purchasing, support, and general inquiries: contact@calcview.com<br><br>
+
+
+<ul>
+<li><a href="#ref1">1.0 A Quick Introduction</a>
+<li><a href="#ref1a">1.1 Simulating a block</a>
+<li><a href="#ref1b">1.2 Using the Online Functionality</a><br>
+<li><a href="#ref2">2.0 Frequently Asked Questions</a>
+<li><a href="#ref2a">2.1 What is the "Foxboro approved" way to install java on a Solaris 2.5 system?</a>
+<li><a href="#ref2b">2.2 Any tricks in doing a Windows install of java?</a>
+<li><a href="#ref2c">2.3 Are there any Solaris limitations in CALCView?</a>
+<li><a href="#ref2d">2.4 Are there any Windows limitations in CALCView?</a>
+</ul>
+
+<br><br>
+
+<H2><a name="ref1">1.0 A Quick Introduction</a></H2>
+
+<H3><a name ="ref1a">1.1 Simulating a block</a></H3>
+
+Using CALCView is very simple. You enter the steps on the left side of the window.  When you use registers in a step, it appears in the
+upper right side of the window.<br><br>
+
+Type in the following program:<br><br>
+<code>
+STEP01 = IN BI01<br>
+STEP02 = BIT 12<br>
+STEP03 = INC RO01<br>
+STEP04 = IN RO01<br>
+STEP05 = SIN<br>
+STEP06 = BIP 10<br>
+STEP07 = INC RO02<br>
+STEP08 = SBD RO02<br>
+STEP09 = EXIT<br>
+STEP10 = DEC RO02<br>
+STEP11 = CBD RO02<br>
+STEP12 = END
+</code><br><br>
+
+To edit a line, you have to double-click it. If you make a mistake, a red dot will appear beside the statement indicating
+an error.<br><br>
+
+Notice when you enter a line that references a register, that register is added to the list of registers.  This way only the information
+that is useful to you is displayed.<br><br>
+
+Now click on the "Play" button.  This executes the block.  The green dots beside the statements show which lines were 
+executed. Some of the lines were not executed because of the branch statement in STEP02. Any registers that have been modified
+also have green dots beside them.<br><br>
+
+You can change how the sample program branches by changing the value of BI01 to 0 or 1.<br><br>
+
+Also note the behaviour of the BAD checkbox. The program sets and clears the BAD status of RO01. You may also toggle it
+manually.<br><br>
+
+Try the "Step" button.  This executes the lines one at a time so you can watch how the stack is affected by the
+instructions.<br><br>
+
+The "Loop" button executes the block at regular intervals which is settable in the settings window. The button turns green to
+indicate that looping is turned on. Press "Stop" to stop looping. You can change registers while the program is looping to test 
+various conditions.<br><br>
+
+<H3><a name ="ref1b">1.2 Using the Online Functionality</a></H3>
+
+CALCView also allows you to connect to a process.  Simply select a CP and type in the Compond and Block separated by ":".  If you want
+to load in the steps for an existing block, click "Get". If you want to write the steps back to a CP, click "Put".<br><br>
+
+You can also read and write individual registers. When you click the "online" checkbox, any registers the have the "GET" checkbox checked on
+will be read when the block first starts executing. Similarly, any registers with "PUT" checked on will be written when the block finished 
+execution (NOTE: you may have to put the block in manual to write some parameters).<br><br>
+
+
+<H2><a name="ref2">2.0 FAQ</a></H2>
+<H3><a name ="ref2a">2.1 What is the "Foxboro approved" way to install java on a Solaris 2.5 system?</a></H3>
+
+Solaris 2.5 requires Java 1.2.2 which is avalable from Sun (http://java.sun.com/j2se/downloads.html).Ê 
+It also requires the installation of 4 Solaris patches which are also available from Sun:<br><br>
+
+NOTE: Java 1.2 is the last version of Java that will run on Solaris 2.5 so don't bother trying the newer versions.<br><br>
+
+<code>
+103461-33  http://sunsolve.sun.com/pub-cgi/findPatch.pl?patchId=103461&rev=33<br>
+103566-56  http://sunsolve.sun.com/pub-cgi/findPatch.pl?patchId=103566&rev=56<br>
+103627-13  http://sunsolve.sun.com/pub-cgi/findPatch.pl?patchId=103627&rev=13<br>
+103640-37  http://sunsolve.sun.com/pub-cgi/findPatch.pl?patchId=103640&rev=37<br><br>
+</code>
+
+To install the patches follow these directions:<br><br>
+
+1. Backup sad. Type the following:<br>
+<code>
+cd /kernel/drv<br>
+cp sad sad.org<br><br>
+</code>
+
+2. Resart in single user mode.<br><br>
+
+3. Decompress the patches and run "installpatch -d ." in each of the patch directories.<br><br>
+
+4. Replace sad. Type the following:<br>
+<code>
+cd /kernel/drv<br>
+mv sad.org sad<br>
+</code>
+
+<H3><a name ="ref2b">2.2 Any tricks in doing a Windows install of java?</a></H3>
+
+No tricks. Just follow the instructions on Sun's web site. You can use the latest version - JRE 1.4.1 as of this writing.
+
+<H3><a name ="ref2c">2.3 Are there any Solaris limitations in CALCView?</a></H3>
+
+The only thing wrong with CALCView on a Solaris system is a few of the dialogs get a blue border. We believe this is due to a bug in 
+Java 1.2.2 and are looking for a way around it.Ê However, the program is still completely functional.
+
+<H3><a name ="ref2d">2.4 Are there any Windows limitations in CALCView?</a></H3>
+
+The icc driver task fail during an upload or a download for some unknown reason (spinit problem).Ê We are looking into a fix or a 
+workaround.Ê You can manually dump blocks with the icc driver task an open them in CALCView for debugging.
+
+</body>
+</html>

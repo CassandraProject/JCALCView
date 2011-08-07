@@ -1,0 +1,12 @@
+#CALCView Prefs
+#Wed May 26 06:51:34 EDT 2010
+OmsetPath=/opt/fox/bin/tools/omsetimp
+BlockPeriod=1
+ActivationCode=
+UserName=
+CplnsPath=/etc/cplns
+AcceptLicense=true
+OmgetPath=/opt/fox/bin/tools/omgetimp
+ICCPath=/opt/fox/ciocfg/api/iccdrvr.tsk
+AllICC=true
+DisplayErrors=true

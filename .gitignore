@@ -1,0 +1,6 @@
+*.jar
+CALCViewActApp
+CALCViewActApp/*
+CALCViewApp
+CALCViewApp/*
+.DS_Store
