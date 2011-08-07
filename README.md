@@ -21,7 +21,7 @@ Some features:
 
 Clone the repo from GitHub:
 
-    git clone git://github.com/CassandraProject/CALCView_java.git
+    git clone git://github.com/CassandraProject/JCALCView.git
 
 If you didn't use git on an AW, then you will need to transfer the directory to
 a Foxboro AW
