@@ -7,6 +7,7 @@ If you find it annoying that you cannot easily insert a line or always wished th
 could actually see how one of these blocks work from the inside, this program is for you.
 
 Some features:
+
 + Complete graphical interface including copy and paste
 + Can emulate CALC, CALCA, LOGIC, and MATH blocks
 + Completely interactive. You can step through code one line at a time and change anything on the fly.
