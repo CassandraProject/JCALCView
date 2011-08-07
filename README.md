@@ -7,14 +7,14 @@ If you find it annoying that you cannot easily insert a line or always wished th
 could actually see how one of these blocks work from the inside, this program is for you.
 
 Some features:
-*Complete graphical interface including copy and paste
-*Can emulate CALC, CALCA, LOGIC, and MATH blocks
-*Completely interactive. You can step through code one line at a time and change anything on the fly.
-*Connect to live process variables (via omset/omget) (Java version only)
-*Visual stack representation.
-*Shows all registers used in the program as well as their statuses (Bad, Out of service, Error)
-*Online editing of blocks (via ICC Driver Task)
-*Displays all block parameters. You can even change block types.
++ Complete graphical interface including copy and paste
++ Can emulate CALC, CALCA, LOGIC, and MATH blocks
++ Completely interactive. You can step through code one line at a time and change anything on the fly.
++ Connect to live process variables (via omset/omget) (Java version only)
++ Visual stack representation.
++ Shows all registers used in the program as well as their statuses (Bad, Out of service, Error)
++ Online editing of blocks (via ICC Driver Task)
++ Displays all block parameters. You can even change block types.
 
 ## Installation ##
 
