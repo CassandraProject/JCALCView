@@ -1,7 +1,7 @@
 # CALCView #
 ### CALCView is a program for creating, editing, and debugging CALC blocks  ###
 
-`CALCView` is a program that makes it easier to create, edit and debug CALC, 
+`CALCView` is a Java program that makes it easier to create, edit and debug CALC, 
 CALCA, MATH and LOGIC Blocks in the Foxboro I/A system in a simple and intuitive way. 
 If you find it annoying that you cannot easily insert a line or always wished that you 
 could actually see how one of these blocks work from the inside, this program is for you.
